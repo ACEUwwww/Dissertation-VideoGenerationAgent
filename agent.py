@@ -315,10 +315,10 @@ def main(user_hint: str):
     asyncio.run(synth_tts_to_wav(plan["voiceover"], TTS_OUT))
 
     # 3) 文生视频
-    # print("\n[3] 提交可灵任务 ...")
-    # task_id = create_kling_task(prompt=plan["kling_prompt"], aspect_ratio=ASPECT_RATIO, duration=DURATION_SEC)
-    # print(f"[Kling] task_id = {task_id}")
-    # wait_and_download_kling(task_id, KLING_VIDEO)
+    print("\n[3] 提交可灵任务 ...")
+    task_id = create_kling_task(prompt=plan["kling_prompt"], aspect_ratio=ASPECT_RATIO, duration=DURATION_SEC)
+    print(f"[Kling] task_id = {task_id}")
+    wait_and_download_kling(task_id, KLING_VIDEO)
 
     # 4) 口型对齐
     print("\n[4] wave to lip online...")

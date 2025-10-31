@@ -24,11 +24,8 @@ python agent.py
 ```
 
 Wav2Lip
-- To use Wav2Lip, clone the Wav2Lip repository and install dependencies as described in their README: https://github.com/Rudrabha/Wav2Lip
-- Pass `--wav2lip-path C:\path\to\Wav2Lip` to `api.py` to point to your local Wav2Lip repo root.
-
-Fallback
-- If Wav2Lip is not available, the script will try to mux the audio with the input video using moviepy.
+To use Wave2lip, need to first train the model or get a weight online.
+Put the .pth file to Wave2lip/checkpoints
 
 Security
 - Do NOT hardcode API keys. Use environment variables. The original `api.py` contained an exposed key; it has been removed.
