@@ -1,15 +1,11 @@
 # Sora -> LLM -> TTS -> Wav2Lip Orchestrator
 
-This repository contains `api.py`, a lightweight orchestrator that demonstrates a pipeline:
+This repository contains `agent.py`, a lightweight orchestrator that demonstrates a pipeline:
 
 - Generate or accept a silent video (Sora via OpenAI Video.create or a local file)
 - Generate narration text with OpenAI ChatCompletion (GPT-4)
 - Synthesize speech with edge-tts (preferred) or gTTS (fallback)
 - Lip-sync audio to the silent video using Wav2Lip (if installed) or fallback to muxing with moviepy
-
-Quick notes
-- Set your OpenAI API key in the environment: `setx OPENAI_API_KEY "sk-..."` (Windows PowerShell)
-- Wav2Lip is a separate project and must be installed according to its repo instructions; this script can call it if available.
 
 Requirements
  - Python 3.8+
@@ -24,13 +20,7 @@ Using the script
 Generate everything (Sora video requires OpenAI account with Video API access):
 
 ```powershell
-python api.py --sora-prompt "阳光明媚的海滩" --duration 10 --out final.mp4
-```
-
-Use your own silent video and provide custom narration:
-
-```powershell
-python api.py --video-in path\to\silent.mp4 --narration "这是旁白文本。" --out final.mp4
+python agent.py
 ```
 
 Wav2Lip
