@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 生成的视频音频文件
+outputs/*.mp4
+outputs/*.wav
+outputs/*.avi
+outputs/*.mov
+outputs/*.mkv
+# 但保留 outputs/ 目录结构
+!outputs/.gitkeep
+
+# Wav2Lip 模型权重文件
+Wav2Lip/checkpoints/*.pt
+Wav2Lip/checkpoints/*.pth
+Wav2Lip/checkpoints/*.ckpt
+# 但保留 README.md
+!Wav2Lip/checkpoints/README.md
+
+# 临时文件和日志
+*.log
+*.tmp
+temp/
+*.cache
+
+# API密钥和敏感信息（如果存在）
+.env
+*.key
+*.pem
+
+# 其他生成的文件
+*.aff
+*.json.bak
+

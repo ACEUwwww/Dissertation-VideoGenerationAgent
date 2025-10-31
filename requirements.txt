@@ -1,0 +1,6 @@
+openai>=1.0.0
+requests
+edge-tts; platform_system == 'Windows'
+gTTS
+moviepy
+numpy
